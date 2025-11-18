@@ -1,0 +1,107 @@
+/* CONTAINER */
+.navbar {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  color: #6a5dfc;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* LINKS DESKTOP */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.navbar-link:hover {
+  color: #6a5dfc;
+}
+
+/* BOTÃO MOBILE */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-link {
+    padding: 10px 0;
+  }
+}
+
+/* destaque quando está ativo */
+.navbar-link.active {
+  color: #6a5dfc;           /* cor de destaque */
+  font-weight: 700;
+  position: relative;
+}
+
+/* underline animado opcional */
+.navbar-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 3px;
+  background: linear-gradient(90deg, #7c5cf5, #8c6bff);
+  border-radius: 4px;
+  transform: scaleX(1);
+  transition: transform 180ms ease;
+}
+
+/* se quiser um hover suave sem active */
+.navbar-link:hover {
+  color: #6a5dfc;
+}
+

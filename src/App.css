@@ -1,0 +1,32 @@
+/* LAYOUT HORIZONTAL */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;         /* ajuste conforme seu layout */
+  flex-shrink: 0;
+}
+
+/* ÁREA DA DIREITA (main + footer) */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  min-width: 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+}

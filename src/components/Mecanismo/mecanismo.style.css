@@ -1,0 +1,304 @@
+.form__inp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.form__inp input {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #d0c7fc;
+  background: #faf8ff;
+  font-size: 15px;
+  color: #333;
+  transition: 0.2s;
+}
+
+.form__inp input::placeholder {
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+.form__inp input:focus {
+  border-color: #7c5cf5;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 92, 245, 0.2);
+}
+
+.cnt__btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn__mec {
+  padding: 12px 24px;
+  font-size: 15px;
+  background: linear-gradient(90deg, #7c5cf5, #8c6bff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.btn__mec:hover {
+  background: linear-gradient(90deg, #6b4ee3, #7c5cf5);
+  box-shadow: 0 4px 10px rgba(124, 92, 245, 0.3);
+}
+
+
+.btn__mec a {
+    text-decoration: none;
+    color: white;
+}
+
+.cnt__btn {
+  display: flex;
+  justify-content: flex-start; /* ou center */
+}
+
+
+.btn__mec:hover {
+    background: #8A2BE2;
+    
+}
+
+.inp__mec{
+    margin-top: 10px;
+    padding: 10px 24px;
+    gap: 10px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    width: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 1;
+    min-width: 200px;
+   
+}
+
+.form__mec {
+  background: #ece4ff; 
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+
+.form__mec h1 {
+    font-size: clamp(24px, 4vw, 38px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px)
+ {
+    .form__inp {
+        flex-direction: column;
+    }
+    .cnt__btn {
+        flex-direction: column;
+    }
+    .btn__mec {
+        width: 100%;
+    }
+}
+
+/* CONTAINER DA TABELA */
+.tabela__mec {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: separate;
+  border-spacing: 0 14px; /* espaço entre "cards" das linhas */
+}
+
+/* CABEÇALHO */
+.tabela__mec thead th {
+  text-align: left;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* LINHA COMO CARD */
+.tabela__mec tbody tr {
+  background: rgba(180, 160, 255, 0.18); /* lilás + glass */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+
+/* HOVER DO CARD */
+.tabela__mec tbody tr:hover {
+  background: rgba(180, 160, 255, 0.30);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* CÉLULAS */
+.tabela__mec tbody td {
+  padding: 16px 20px;
+  font-size: 14.5px;
+  color: #222;
+}
+
+/* ARREDONDAMENTO */
+.tabela__mec tbody tr td:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.tabela__mec tbody tr td:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* COLUNA AÇÕES */
+.tabela__mec tbody td:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+
+.btn-editar {
+  padding: 6px 12px;
+  background: #7C5CF5; /* lilás elegante */
+  color: white;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-editar:hover {
+  background: #6a4be0;
+}
+
+.btn-excluir {
+  padding: 6px 12px;
+  margin-left: 8px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.btn-excluir:hover {
+  background: #b21721;
+}
+
+/* Grid padrão: 4 colunas no desktop */
+.form__inp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* MOBILE (até 768px) – 2 colunas */
+@media (max-width: 768px) {
+  .form__inp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR PEQUENO (até 500px) – 1 coluna */
+@media (max-width: 500px) {
+  .form__inp {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid padrão: 4 colunas no desktop */
+.form__inp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* MOBILE (até 768px) – 2 colunas */
+@media (max-width: 768px) {
+  .form__inp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR PEQUENO (até 500px) – 1 coluna */
+@media (max-width: 500px) {
+  .form__inp {
+    grid-template-columns: 1fr;
+  }
+}
+/* Wrapper da tabela para responsividade */
+.tabela-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Evitar quebra feia nas células */
+.tabela__mec {
+  min-width: 700px; /* largura mínima para manter o layout */
+}
+
+/* MOBILE: transforma a tabela em cards elegantes */
+@media (max-width: 768px) {
+
+  /* Esconde o cabeçalho */
+  .tabela__mec thead {
+    display: none;
+  }
+
+  .tabela__mec tbody tr {
+    display: block;
+    background: rgba(180, 160, 255, 0.20);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+
+  .tabela__mec tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Remove a linha no último item */
+  .tabela__mec tbody td:last-child {
+    border-bottom: none;
+  }
+
+  /* Rótulo (vem do data-label) */
+  .tabela__mec tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    margin-right: 12px;
+  }
+
+  /* Ações (botões) ficam lado a lado */
+  .tabela__mec tbody td[data-label="Ações"] {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
