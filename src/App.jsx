@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="layout">
       <Navbar />
-
+     
       <main className="main-content">
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
