@@ -1,10 +1,11 @@
 /* CONTAINER */
 .navbar {
-  height: 60px;
-  background: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
-  padding: 0 24px;
   display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 24px;
   align-items: center;
   justify-content: space-between;
 }
@@ -53,13 +54,12 @@
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-
   .navbar-toggle {
     display: block;
   }
 
   .navbar-menu {
-    position: absolute;
+    /* position: absolute; */
     top: 60px;
     right: 0;
     background: white;
@@ -81,7 +81,7 @@
 
 /* destaque quando está ativo */
 .navbar-link.active {
-  color: #6a5dfc;           /* cor de destaque */
+  color: #6a5dfc; /* cor de destaque */
   font-weight: 700;
   position: relative;
 }
@@ -104,4 +104,3 @@
 .navbar-link:hover {
   color: #6a5dfc;
 }
-
