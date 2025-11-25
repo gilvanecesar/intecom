@@ -1,8 +1,13 @@
 import "./dashboard.style.css";
 import { CiCalendarDate } from "react-icons/ci";
 import { FaIndustry } from "react-icons/fa";
+import Kpis from "../Kpis/kpis";
+import { useState } from "react";
+import { Calculator } from "lucide-react";
 
 export default function Dashboard() {
+  const [producaoTotal, setProducaoTotal] = useState(0);
+
   return (
     <>
       <div className="card-titulo">
@@ -15,7 +20,11 @@ export default function Dashboard() {
         <div className="card-1">
           <div className="card-1-interno">
             <FaIndustry className="fa-ind" />
-            <h2>Peças por dia</h2>
+            <h2>Produção Total</h2>
+            <br />
+          </div>
+          <div className="card-1-resultado">
+            <h2>{producaoTotal}</h2>
           </div>
         </div>
 
@@ -45,9 +54,8 @@ export default function Dashboard() {
       </div>
 
       <section className="section-container">
-        <div className="cnt-section">
-          <h1>AQUI VAI OS INDICADORES</h1>
-        </div>
+        <div className="cnt-section"></div>
+        <Kpis onCalcular={setProducaoTotal} />
       </section>
     </>
   );

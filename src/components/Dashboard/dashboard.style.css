@@ -36,6 +36,12 @@
   height: 130px;
 }
 
+.card-1-resultado {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+}
+
 .card-1-interno {
   display: flex;
   flex-direction: row;
